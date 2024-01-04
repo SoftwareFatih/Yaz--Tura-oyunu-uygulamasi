@@ -1,0 +1,116 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+body{
+    height: 50px;
+    background:linear-gradient(to right,#fc5185 50%,#00adb5 50%) fixed;
+}
+.container{
+    background-color: white;
+    width: 400px;
+    padding:50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    box-shadow: 15px 30px 35px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective:300px;
+}
+  
+ .stats{
+        text-align: right;
+        color: #f10937;
+        font-weight: 700;
+        line-height: 25px;
+        
+    }
+#coin{
+        height: 150px;
+        width: 150px;
+        position: relative;
+        margin:50px auto;
+        transform-style: preserve-3d;
+      
+}
+    
+.yazi{
+       
+        transform: rotateY(180deg);
+      
+       }
+.tura,.yazi {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+        
+    }
+
+
+.buttons{
+        display: flex;
+        justify-content: space-between;
+    }
+
+button{
+        width: 120px;
+        padding: 10px 0px;
+        border: 3px solid #ff2e63;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+#coin img{
+        width: 145px;
+    }
+
+
+
+#flip-button{
+        background-color: #fc5185;
+        color: #fff;
+    }
+#flip-button:disabled{
+        background-color: #e1e0ee;
+        color: #101020;
+        border-radius: #e1e0ee;
+    }
+#reset-button{
+        background-color: #fff;
+        color:#000;
+    }
+
+
+    #coin.heads {
+        -webkit-animation: flipHeads 3s ease-out forwards;
+        -moz-animation: flipHeads 3s ease-out forwards;
+          -o-animation: flipHeads 3s ease-out forwards;
+             animation: flipHeads 3s ease-out forwards;
+      }
+      #coin.tails {
+        -webkit-animation: flipTails 3s ease-out forwards;
+        -moz-animation: flipTails 3s ease-out forwards;
+          -o-animation: flipTails 3s ease-out forwards;
+             animation: flipTails 3s ease-out forwards;
+      }
+      
+      @-webkit-keyframes flipHeads {
+        from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
+        to { -webkit-transform: rotateY(1800deg); -moz-transform: rotateY(1800deg); transform: rotateY(1800deg); }
+      }
+      @-webkit-keyframes flipTails {
+        from { -webkit-transform: rotateY(0); -moz-transform: rotateY(0); transform: rotateY(0); }
+        to { -webkit-transform: rotateY(1980deg); -moz-transform: rotateY(1980deg); transform: rotateY(1980deg); }
+      }
+
+
+    
+
+    
+
+
